@@ -16,6 +16,9 @@ st.sidebar.markdown("Evaluating sentiment of tweets from the 117th US Congress t
 #loading the data (the csv file is in the same folder)
 #if the file is stored the copy the path and paste in read_csv method.
 data=pd.read_csv('newdf.csv')
+@st.cache
+def load_data(nrows):
+    
 #checkbox to show data 
 if st.checkbox("Show Data"):
     st.write(data.head(50))
