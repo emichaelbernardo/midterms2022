@@ -25,6 +25,6 @@ st.sidebar.subheader('Tweets Analyser')
 
 st.subheader('tweets by month')
 hist_values = np.histogram(
-    data[Date].dt.month, bins=12, range=(0,12))[0]
+    data['Date'].dt.month, bins=12, range=(0,12))[0]
 
 st.bar_chart(hist_values)
